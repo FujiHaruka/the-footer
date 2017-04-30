@@ -1,0 +1,20 @@
+{
+  "TheFooterStyle": {
+    "description": "Style for TheFooter",
+    "displayName": "TheFooterStyle",
+    "methods": [],
+    "props": {
+      "options": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Style options",
+        "defaultValue": {
+          "value": "{}",
+          "computed": false
+        }
+      }
+    }
+  }
+}
