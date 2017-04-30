@@ -1,4 +1,52 @@
 {
+  "TheFooter": {
+    "description": "Footer of the-components",
+    "displayName": "TheFooter",
+    "methods": [
+      {
+        "name": "CopyRight",
+        "docblock": null,
+        "modifiers": [
+          "static"
+        ],
+        "params": [
+          {
+            "name": "{ year, holder, className, children }",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "Links",
+        "docblock": null,
+        "modifiers": [
+          "static"
+        ],
+        "params": [
+          {
+            "name": "{ className, children }",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "Link",
+        "docblock": null,
+        "modifiers": [
+          "static"
+        ],
+        "params": [
+          {
+            "name": "{ className, to, children }",
+            "type": null
+          }
+        ],
+        "returns": null
+      }
+    ]
+  },
   "TheFooterStyle": {
     "description": "Style for TheFooter",
     "displayName": "TheFooterStyle",
