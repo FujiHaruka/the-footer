@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import TheFooterStyle from './TheFooterStyle'
 import { htmlAttributesFor } from 'the-component-util'
+import { TheContainer } from 'the-container'
 import { TheLink } from 'the-link'
 
 /**
@@ -22,17 +23,36 @@ class TheFooter extends React.PureComponent {
       <footer { ...htmlAttributesFor(props, { except: [ 'className' ] }) }
               className={ classnames('the-footer', className) }
       >
-        { children }
+        <TheContainer className='the-footer-inner'>
+          {children}
+        </TheContainer>
       </footer>
     )
   }
 
-  static Links () {}
+  static CopyRight ({ year, holder, className, children }) {
+    return (
+      <div className={classnames('the-footer-copyright', className)}>
+        {year && holder && `© ${year} ${holder}`}
+        {children}
+      </div>
+    )
+  }
 
-  static Link ({ className, to, children, ...otherProps }) {
-    return <TheLink className={classnames('the-footer-link', className)}
-                    {...{ to, children }}
-    />
+  static Links ({ className, children }) {
+    return (
+      <div className={classnames('the-footer-links', className)}>
+        {children}
+      </div>
+    )
+  }
+
+  static Link ({ className, to, children }) {
+    return (
+      <TheLink className={classnames('the-footer-link', className)}
+               {...{ to }}
+      >{children}</TheLink>
+    )
   }
 }
 

@@ -26,10 +26,32 @@ TheFooterStyle.defaultProps = {
 TheFooterStyle.data = (options) => {
   const { ThemeValues } = TheStyle
   let {
-    dominantColor = ThemeValues.dominantColor
+    lightBorderColor = ThemeValues.lightBorderColor,
+    lightLinkColor = ThemeValues.lightLinkColor
   } = options
   return {
-    '.the-footer': {}
+    '.the-footer': {},
+    '.the-footer-inner': {
+      borderTop: `1px solid ${lightBorderColor}`,
+      padding: '32px 0',
+      display: 'flex',
+      justifyContent: 'space-between',
+      flexWrap: 'wrap',
+      alignItems: 'center',
+      fontSize: 'smaller'
+    },
+    'the-footer-copyright': {
+      display: 'inline-block',
+      padding: '0 8px'
+    },
+    '.the-footer-links': {
+      display: 'flex'
+    },
+    '.the-footer-link': {
+      textDecoration: 'none',
+      padding: '0 8px',
+      color: lightLinkColor
+    }
   }
 }
 

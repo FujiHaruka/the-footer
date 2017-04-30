@@ -18,9 +18,16 @@ describe('the-footer', () => {
 
   it('Render a component', () => {
     let element = render(
-       <TheFooter />
+      <TheFooter />
     )
     ok(element)
+
+    {
+      let link = render(
+        <TheFooter.Link className='hoge'>foo</TheFooter.Link>
+      )
+      ok(link)
+    }
   })
 })
 
