@@ -111,6 +111,11 @@ export default ExampleComponent
 Components
 -----------
 
+### TheFooter
+
+Footer of the-components
+
+
 ### TheFooterStyle
 
 Style for TheFooter

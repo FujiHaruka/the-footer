@@ -4,6 +4,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import TheStyle from 'the-style'
+import { asStyleData } from 'the-component-util'
 
 /** Style for TheFooter */
 const TheFooterStyle = ({ id, className, options }) => (
@@ -29,8 +30,10 @@ TheFooterStyle.data = (options) => {
     lightBorderColor = ThemeValues.lightBorderColor,
     lightLinkColor = ThemeValues.lightLinkColor
   } = options
-  return {
-    '.the-footer': {},
+  return asStyleData('.the-footer', {
+    '': {
+
+    },
     '.the-footer-inner': {
       borderTop: `1px solid ${lightBorderColor}`,
       padding: '32px 0',
@@ -40,7 +43,7 @@ TheFooterStyle.data = (options) => {
       alignItems: 'center',
       fontSize: 'smaller'
     },
-    'the-footer-copyright': {
+    '.the-footer-copyright': {
       display: 'inline-block',
       padding: '0 8px'
     },
@@ -52,7 +55,7 @@ TheFooterStyle.data = (options) => {
       padding: '0 8px',
       color: lightLinkColor
     }
-  }
+  })
 }
 
 export default TheFooterStyle
