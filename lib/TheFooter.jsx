@@ -56,9 +56,11 @@ class TheFooter extends React.PureComponent {
   }
 
   static Row ({children, className}) {
-    <div className={classnames('the-footer-row', className)}>
-      {children}
-    </div>
+    return (
+      <div className={classnames('the-footer-row', className)}>
+        {children}
+      </div>
+    )
   }
 }
 
