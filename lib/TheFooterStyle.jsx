@@ -7,10 +7,10 @@ import TheStyle from 'the-style'
 import { asStyleData } from 'the-component-util'
 
 /** Style for TheFooter */
-const TheFooterStyle = ({ id, className, options }) => (
-  <TheStyle { ...{ id } }
-            className={ classnames('the-footer-style', className) }
-            styles={ TheFooterStyle.data(options) }
+const TheFooterStyle = ({id, className, options}) => (
+  <TheStyle {...{id}}
+            className={classnames('the-footer-style', className)}
+            styles={TheFooterStyle.data(options)}
   />
 )
 
@@ -25,15 +25,13 @@ TheFooterStyle.defaultProps = {
 }
 
 TheFooterStyle.data = (options) => {
-  const { ThemeValues } = TheStyle
+  const {ThemeValues} = TheStyle
   let {
     lightBorderColor = ThemeValues.lightBorderColor,
     lightLinkColor = ThemeValues.lightLinkColor
   } = options
   return asStyleData('.the-footer', {
-    '': {
-
-    },
+    '': {},
     '.the-footer-inner': {
       borderTop: `1px solid ${lightBorderColor}`,
       padding: '32px 0',
@@ -54,6 +52,14 @@ TheFooterStyle.data = (options) => {
       textDecoration: 'none',
       padding: '0 8px',
       color: lightLinkColor
+    },
+    '.the-footer-row': {
+      display: 'flex',
+      justifyContent: 'space-between',
+      flexWrap: 'wrap',
+      alignItems: 'center',
+      fontSize: 'smaller',
+      margin: '8px 0'
     }
   })
 }

@@ -1,33 +1,15 @@
 {
   "name": "the-footer",
-  "version": "2.0.3",
   "description": "Footer of the-components",
-  "main": "shim",
-  "scripts": {
-    "build": "the-script-build",
-    "doc": "the-script-doc",
-    "prepare": "the-script-build && the-script-doc",
-    "release": "the-script-release -y",
-    "share": "the-script-share",
-    "test": "the-script-test",
-    "update": "the-script-update",
-    "watch": "the-script-build -w"
-  },
-  "repository": "the-labo/the-footer",
-  "keywords": [
-    "the",
-    "react-component"
-  ],
+  "version": "2.0.3",
   "author": {
     "name": "Taka Okunishi",
     "email": "okunishinishi@gmail.com",
     "url": "http://okunishitaka.com"
   },
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/the-labo/the-footer/issues"
   },
-  "homepage": "https://github.com/the-labo/the-footer#readme",
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
@@ -40,22 +22,40 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.1.1",
-    "the-component-demo": "^4.0.4",
+    "the-component-demo": "^4.0.6",
     "the-router": "^2.0.6",
-    "the-script-build": "^2.0.1",
+    "the-script-build": "^2.1.0",
     "the-script-doc": "^1.0.1",
     "the-script-release": "^1.0.6",
     "the-script-share": "^1.0.5",
     "the-script-test": "^2.0.1",
     "the-script-update": "^1.0.0",
-    "the-templates": "^2.1.14"
-  },
-  "peerDependencies": {
-    "react": ">=15",
-    "react-dom": ">=15"
+    "the-templates": "^2.4.3"
   },
   "engines": {
     "node": ">=6",
     "npm": ">=4"
+  },
+  "homepage": "https://github.com/the-labo/the-footer#readme",
+  "keywords": [
+    "react-component",
+    "the"
+  ],
+  "license": "MIT",
+  "main": "shim",
+  "peerDependencies": {
+    "react": ">=15",
+    "react-dom": ">=15"
+  },
+  "repository": "the-labo/the-footer",
+  "scripts": {
+    "build": "the-script-build",
+    "doc": "the-script-doc",
+    "prepare": "the-script-build && the-script-doc",
+    "release": "the-script-release -y",
+    "share": "the-script-share",
+    "test": "the-script-test",
+    "update": "the-script-update",
+    "watch": "the-script-build -w"
   }
 }

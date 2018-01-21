@@ -14,14 +14,14 @@ import { TheLink } from 'the-link'
 class TheFooter extends React.PureComponent {
   render () {
     const s = this
-    const { props } = s
+    const {props} = s
     let {
       className,
       children
     } = props
     return (
-      <footer { ...htmlAttributesFor(props, { except: [ 'className' ] }) }
-              className={ classnames('the-footer', className) }
+      <footer {...htmlAttributesFor(props, {except: ['className']})}
+              className={classnames('the-footer', className)}
       >
         <TheContainer className='the-footer-inner'>
           {children}
@@ -30,7 +30,7 @@ class TheFooter extends React.PureComponent {
     )
   }
 
-  static CopyRight ({ year, holder, className, children }) {
+  static CopyRight ({year, holder, className, children}) {
     return (
       <div className={classnames('the-footer-copyright', className)}>
         {year && holder && `© ${year} ${holder}`}
@@ -39,7 +39,7 @@ class TheFooter extends React.PureComponent {
     )
   }
 
-  static Links ({ className, children }) {
+  static Links ({className, children}) {
     return (
       <div className={classnames('the-footer-links', className)}>
         {children}
@@ -47,12 +47,18 @@ class TheFooter extends React.PureComponent {
     )
   }
 
-  static Link ({ className, to, children }) {
+  static Link ({className, to, children}) {
     return (
       <TheLink className={classnames('the-footer-link', className)}
-               {...{ to }}
+               {...{to}}
       >{children}</TheLink>
     )
+  }
+
+  static Row ({children, className}) {
+    <div className={classnames('the-footer-row', className)}>
+      {children}
+    </div>
   }
 }
 
