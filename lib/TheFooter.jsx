@@ -33,7 +33,7 @@ class TheFooter extends React.PureComponent {
   static CopyRight ({year, holder, className, children}) {
     return (
       <div className={classnames('the-footer-copyright', className)}>
-        {year && holder && `© ${year} ${holder}`}
+        {holder && `© ${year || ''} ${holder}`}
         {children}
       </div>
     )
